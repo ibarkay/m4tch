@@ -1,0 +1,16 @@
+<h1>match {{search}} jobs</h1>
+<h2>
+	skills neede for this job : {%for s in jobs %} {{s.skills.all}} {%endfor%}
+</h2>
+<p>the best match will shown first</p>
+<ul>
+	{% for can in candidates %}
+	<li>{{can}} , {{can.name}} , {{can.skills.all}}</li>
+	{%endfor%}
+</ul>
+<script>
+	function home() {
+		window.location.href = "http://127.0.0.1:8000/";
+	}
+</script>
+<button onclick="home()">Home</button>

@@ -1,0 +1,14 @@
+<h1>Home of The Best Job Matcher Ever build!</h1>
+<input type="text" placeholder="Search for job title..." id="myInput" />
+<button type="button" onclick="getInputValue();">Search</button>
+<p>Example jobs : hacker , Full-stack, qa</p>
+
+<pre>/admin credz are admin:admin</pre>
+
+<script>
+	function getInputValue() {
+		var inputVal = document.getElementById("myInput").value;
+
+		window.location.href = `http://127.0.0.1:8000/CandidateFinder/${inputVal}`;
+	}
+</script>
